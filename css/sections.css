@@ -137,18 +137,15 @@
     text-align: center;
     position: relative;
     font-family: 'Poppins', sans-serif;
-    
-    /* 2. EFFET DE FOND TRANSPARENT (noir avec 40% d'opacité) */
-    background-color: rgba(0, 0, 0, 0.4); /* Rétro-éclairage sombre */
+    background-color: rgba(0, 0, 0, 0.4); 
 
 
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), 
                 inset 0 0 0 20px transparent;
-    border-radius: 12px; /* Pour l'effet d'arrondi de la carte elle-même */
-    margin: 30px; /* Crée l'espace "flottant" entre la carte et le bord du conteneur */
+    border-radius: 12px; 
+    margin: 30px; 
 }
 
-/* On retire la couleur de fond spécifique pour laisser l'image de la lune transparaître */
 .vm-vision, .vm-mission {
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -157,7 +154,6 @@
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 20px;
-    /* Couleur du texte blanc */
     color: #fff; 
 }
 
@@ -165,11 +161,10 @@
     font-size: 18px;
     line-height: 1.6;
     max-width: 90%;
-    /* Couleur du texte blanc ou légèrement gris */
     color: #f0f0f0; 
 }
 
-/* L'effet de bordure interne n'est plus nécessaire car remplacé par box-shadow sur .vm-card */
+
 .vm-card::before, .vm-mission::after {
     content: none;
 }
@@ -182,8 +177,8 @@
     padding: 0 20px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: #000; /* Le texte principal est noir sur l'image */
-    background-color: #fff; /* Le fond de la section est blanc */
+    color: #000; 
+    background-color: #fff; 
 }
 
 .planet-section h1 {
@@ -196,18 +191,16 @@
 .planet-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 40px 20px; /* Espace vertical et horizontal */
+    gap: 40px 20px; 
     justify-content: center;
 }
 
 .planet-card {
-    /* Fond de carte blanc, sans padding extérieur */
     background-color: #fff; 
     padding: 0;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* Aligne tous les éléments internes (image, h3, p) au centre */
     align-items: center; 
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -215,13 +208,11 @@
     transition: transform 0.3s ease;
 }
 
-/* --------------------------------------
- * Conteneur d'image (la partie grise/blanche)
- * -------------------------------------- */
+
 .planet-image-container {
     width: 100%;
     max-width: 100%;
-    height: 250px; /* Hauteur définie pour le bloc image */
+    height: 250px;
     
     background-color: #f5f5f5; 
     margin-bottom: 20px;
@@ -244,14 +235,14 @@
     font-weight: 700;
     margin-bottom: 8px;
     color: #000;
-    padding: 0 15px; /* Petit padding pour éviter que le texte touche les bords */
+    padding: 0 15px; 
 }
 
 .planet-card .description {
     font-size: 15px;
     color: #555;
     margin-bottom: 15px;
-    height: 75px; /* Hauteur pour aligner les blocs verticalement */
+    height: 75px; 
     overflow: hidden;
     padding: 0 15px;
 }
@@ -260,9 +251,9 @@
     font-size: 14px;
     color: #777;
     line-height: 1.5;
-    text-align: left; /* Les détails sont alignés à gauche dans la carte */
+    text-align: left;
     width: 100%;
-    padding: 0 25px 25px 25px; /* Padding bas pour l'espacement */
+    padding: 0 25px 25px 25px; 
 }
 
 .planet-card .details strong {
@@ -295,14 +286,13 @@
 }
 
 .mission-card {
-    background-color: #2e2e2e; /* Couleur de fond foncée pour les cartes */
+    background-color: #2e2e2e; 
     border-radius: 20px;
-    overflow: hidden; /* Important pour que l'image et l'info soient dans la carte */
+    overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
-
 
 .mission-image-container {
     width: 100%;
@@ -347,4 +337,33 @@
 .mission-info strong {
     font-weight: 700;
     color: #fff;
+}
+
+.about-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000; 
+    background-color: #fff; 
+}
+
+.about-section h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.about-image-container img{
+    width: 1000px;
+    height: 550px;
+    margin-bottom: 50px;
+}
+
+.about-image-container p{
+    text-align: left;
+    margin-bottom: 30px;
 }
