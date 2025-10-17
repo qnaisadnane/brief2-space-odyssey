@@ -1,8 +1,4 @@
-/* sections.css */
 
-/* -------------------------------------------
- * 1. BANNER (HÉRO)
- * ------------------------------------------- */
 .banner {
     width: 100%; height: 480px; background-image: url('../assets/banner.png'); 
     background-size: cover; background-position: center; display: flex;
@@ -13,10 +9,6 @@
 .banner-content h1 { font-size: 56px; font-weight: 700; margin-bottom: 24px; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
 .banner-content p { font-size: 24px; font-weight: 400; margin-bottom: 32px; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 
-
-/* -------------------------------------------
- * 2. FEATURES & CARTES GÉNÉRALES
- * ------------------------------------------- */
 .features { width: 100%; padding: 30px 0 0 0; display: flex; flex-direction: column; align-items: center; }
 .features-cards { display: flex; gap: 40px; justify-content: center; margin: 50px 0; }
 .feature-card {
@@ -28,10 +20,6 @@
 .feature-card h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; font-family: 'Poppins', sans-serif; }
 .feature-card p { font-size: 17px; font-weight: 400; margin-bottom: 32px; font-family: 'Poppins', sans-serif; }
 
-
-/* -------------------------------------------
- * 3. FEATURES DÉTAILS (Description & Temps)
- * ------------------------------------------- */
 .features-container {
     display: flex; gap: 40px; align-items: flex-start; max-width: 1400px;
     margin: 0 auto; padding: 20px;
@@ -55,7 +43,6 @@
 .features-time-title { font-size: 20px; font-weight: 500; margin-right: 16px; }
 .features-time-value { font-size: 28px; font-weight: 600; letter-spacing: 6px; }
 
-/* Styles répétitifs pour la section "Day" */
 .features-container-day {
     margin-top: 40px; display: flex; gap: 40px; align-items: flex-start;
     max-width: 1400px; padding: 20px;
@@ -67,10 +54,6 @@
 }
 .features-time-day { width: auto; justify-content: initial; margin: 0; flex-shrink: 0; }
 
-
-/* -------------------------------------------
- * 4. SECTION ASTRONOMIE
- * ------------------------------------------- */
 .astronomy-section {
     display: flex; width: 90%; max-width: 1200px; border-radius: 20px; 
     overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
@@ -87,10 +70,6 @@
 .content-card h1 { font-size: 2.5rem; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
 .content-card p { font-size: 1.1rem; line-height: 1.6; color: #ccc; }
 
-
-/* -------------------------------------------
- * 5. SECTION PROFILS
- * ------------------------------------------- */
 .features-profils { 
     display: flex; 
     gap: 40px; 
@@ -138,7 +117,6 @@
 .vision-mission-section {
     width: 90%;
     border-radius: 40px;
-    /* Utilise un fond noir pour masquer les bords */
     background-image: url(../assets/moon.png);
     background-size: cover;
     padding: 80px 0;
@@ -163,8 +141,7 @@
     /* 2. EFFET DE FOND TRANSPARENT (noir avec 40% d'opacité) */
     background-color: rgba(0, 0, 0, 0.4); /* Rétro-éclairage sombre */
 
-    /* 3. EFFET DE BORDURE INTERNE FLOTTANTE */
-    /* On utilise l'ombre interne pour simuler le contour flottant clair */
+
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), 
                 inset 0 0 0 20px transparent;
     border-radius: 12px; /* Pour l'effet d'arrondi de la carte elle-même */
@@ -195,4 +172,179 @@
 /* L'effet de bordure interne n'est plus nécessaire car remplacé par box-shadow sur .vm-card */
 .vm-card::before, .vm-mission::after {
     content: none;
+}
+
+
+.planet-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000; /* Le texte principal est noir sur l'image */
+    background-color: #fff; /* Le fond de la section est blanc */
+}
+
+.planet-section h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.planet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 20px; /* Espace vertical et horizontal */
+    justify-content: center;
+}
+
+.planet-card {
+    /* Fond de carte blanc, sans padding extérieur */
+    background-color: #fff; 
+    padding: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Aligne tous les éléments internes (image, h3, p) au centre */
+    align-items: center; 
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee; 
+    transition: transform 0.3s ease;
+}
+
+/* --------------------------------------
+ * Conteneur d'image (la partie grise/blanche)
+ * -------------------------------------- */
+.planet-image-container {
+    width: 100%;
+    max-width: 100%;
+    height: 250px; /* Hauteur définie pour le bloc image */
+    
+    background-color: #f5f5f5; 
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-image {
+    
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.planet-card h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #000;
+    padding: 0 15px; /* Petit padding pour éviter que le texte touche les bords */
+}
+
+.planet-card .description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    height: 75px; /* Hauteur pour aligner les blocs verticalement */
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.planet-card .details {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    text-align: left; /* Les détails sont alignés à gauche dans la carte */
+    width: 100%;
+    padding: 0 25px 25px 25px; /* Padding bas pour l'espacement */
+}
+
+.planet-card .details strong {
+    color: #555;
+    font-weight: 600;
+}
+
+.missions-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+.missions-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    justify-content: center;
+}
+
+.mission-card {
+    background-color: #2e2e2e; /* Couleur de fond foncée pour les cartes */
+    border-radius: 20px;
+    overflow: hidden; /* Important pour que l'image et l'info soient dans la carte */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mission-image-container {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.mission-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.mission-info {
+    background: #2e2e2e; 
+    color: #fff;
+    padding: 20px 30px 30px 30px;
+    text-align: left;
+}
+
+.mission-info h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.mission-info p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.mission-info p.goal {
+    margin-bottom: 15px;
+}
+
+.mission-info strong {
+    font-weight: 700;
+    color: #fff;
 }
